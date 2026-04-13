@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLogistic | Logística Alimentària d'Alta Precisió</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e40af; /* Blau Corporatiu */
+            --secondary: #10b981; /* Verd Frescor */
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(30, 64, 175, 0.8), rgba(31, 41, 55, 0.9)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-normal">
+
+    <!-- HEADER / NAVEGACIÓ -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-blue-800 p-2 rounded-lg">
+                    <i class="fas fa-truck-fast text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-blue-900">Food<span class="text-emerald-500">Logistic</span></span>
+            </div>
+
+            <!-- Menú Desktop -->
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#inici" class="hover:text-blue-700 transition">Inici</a>
+                <a href="#serveis" class="hover:text-blue-700 transition">Serveis</a>
+                <a href="#nosaltres" class="hover:text-blue-700 transition">Nosaltres</a>
+                <a href="#contacte" class="hover:text-blue-700 transition">Contacte</a>
+            </div>
+
+            <!-- Botó CTA -->
+            <div class="hidden md:block">
+                <a href="#contacte" class="bg-blue-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-900 transition shadow-lg">
+                    Pressupost
+                </a>
+            </div>
+
+            <!-- Botó Mòbil -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-blue-900 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Menú Mòbil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 flex flex-col p-6 space-y-4">
+            <a href="#inici" class="text-lg font-medium py-2 border-b border-gray-50">Inici</a>
+            <a href="#serveis" class="text-lg font-medium py-2 border-b border-gray-50">Serveis</a>
+            <a href="#nosaltres" class="text-lg font-medium py-2 border-b border-gray-50">Nosaltres</a>
+            <a href="#contacte" class="text-lg font-medium py-2 border-b border-gray-50">Contacte</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓ INICI (HERO) -->
+        <section id="inici" class="hero-gradient min-h-screen flex items-center pt-20">
+            <div class="container mx-auto px-6 text-white">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                        La teva cadena de fred, <span class="text-emerald-400">garantida.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-10 text-gray-200">
+                        Experts en logística alimentària nacional i internacional. Connectem productors amb mercats mantenint la màxima frescor.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#serveis" class="bg-emerald-500 hover:bg-emerald-600 text-white text-center px-8 py-4 rounded-lg font-bold text-lg transition shadow-xl">
+                            Explorar Serveis
+                        </a>
+                        <a href="#nosaltres" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 text-center px-8 py-4 rounded-lg font-bold text-lg transition">
+                            Saber-ne més
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓ SERVEIS -->
+        <section id="serveis" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-blue-900 text-sm font-bold uppercase tracking-widest mb-2">Què fem</h2>
+                    <h3 class="text-4xl font-bold text-slate-900">Solucions Logístiques 360º</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Servei 1 -->
+                    <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 card-hover shadow-sm">
+                        <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mb-6 text-2xl">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">Transport Refrigerat</h4>
+                        <p class="text-slate-600 mb-6">Manteniment rigorós de la cadena de fred amb sistemes de monitoratge en temps real per a productes frescos i congelats.</p>
+                        <ul class="text-sm space-y-2 text-slate-500">
+                            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Control de temperatura IoT</li>
+                            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Flota Euro 6 d'alta eficiència</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servei 2 -->
+                    <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 card-hover shadow-sm">
+                        <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mb-6 text-2xl">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">Emmagatzematge Smart</h4>
+                        <p class="text-slate-600 mb-6">Centres logístics d'última generació amb gestió automatitzada d'estocs i control de traçabilitat total.</p>
+                        <ul class="text-sm space-y-2 text-slate-500">
+                            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Gestió de caducitats FIFO/FEFO</li>
+                            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Zones multitemperatura</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servei 3 -->
+                    <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 card-hover shadow-sm">
+                        <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center mb-6 text-2xl">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">Distribució Capil·lar</h4>
+                        <p class="text-slate-600 mb-6">Arribem on els altres no poden. Especialistes en l'última milla per al sector Horeca i Retail alimentari.</p>
+                        <ul class="text-sm space-y-2 text-slate-500">
+                            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Rutes optimitzades per IA</li>
+                            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Entregues puntuals garantides</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓ NOSALTRES -->
+        <section id="nosaltres" class="py-24 bg-slate-900 text-white overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    <div class="md:w-1/2">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Equip FoodLogistic" class="rounded-2xl shadow-2xl relative z-10">
+                            <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-emerald-500 rounded-2xl -z-0"></div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-emerald-400 font-bold uppercase tracking-widest mb-4">La nostra essència</h2>
+                        <h3 class="text-4xl font-bold mb-8 italic text-white/90">"Més que transport, som el vincle entre el camp i la taula."</h3>
+                        <p class="text-gray-400 text-lg mb-8">
+                            Amb més de 20 anys d'experiència, FoodLogistic neix per respondre a les necessitats crítiques del sector alimentari. Entenem que cada minut i cada grau importen. La nostra missió és oferir tranquil·litat als nostres clients mitjançant la innovació i la seguretat alimentària.
+                        </p>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <span class="block text-4xl font-bold text-white">500+</span>
+                                <span class="text-emerald-400 font-medium">Clients Actius</span>
+                            </div>
+                            <div>
+                                <span class="block text-4xl font-bold text-white">24/7</span>
+                                <span class="text-emerald-400 font-medium">Suport Logístic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓ CONTACTE -->
+        <section id="contacte" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto bg-slate-50 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                    <!-- Info de Contacte -->
+                    <div class="md:w-2/5 bg-blue-800 p-12 text-white">
+                        <h3 class="text-3xl font-bold mb-8">Parlem?</h3>
+                        <p class="mb-10 text-blue-100 text-lg">Sol·licita una auditoria de la teva cadena de subministrament sense compromís.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-map-marker-alt mt-1 text-emerald-400"></i>
+                                <span>Carrer de la Logística, 45<br>08040 Barcelona, Espanya</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-phone text-emerald-400"></i>
+                                <span>+34 930 000 000</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-envelope text-emerald-400"></i>
+                                <span>info@foodlogistic.cat</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-16 flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Formulari -->
+                    <div class="md:w-3/5 p-12">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Nom</label>
+                                    <input type="text" required class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Correu Electrònic</label>
+                                    <input type="email" required class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Tipus de Servei</label>
+                                <select class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                                    <option>Transport Refrigerat</option>
+                                    <option>Emmagatzematge</option>
+                                    <option>Distribució Última Milla</option>
+                                    <option>Consulta General</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Missatge</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="Explica'ns les teves necessitats..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-800 text-white font-bold py-4 rounded-lg hover:bg-blue-900 transition-all shadow-lg active:scale-95">
+                                Enviar Sol·licitud
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-100 py-12 border-t border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <div class="bg-blue-800 p-1.5 rounded-md">
+                            <i class="fas fa-truck-fast text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold text-blue-900">FoodLogistic</span>
+                    </div>
+                    <p class="text-slate-500 text-sm">© 2024 FoodLogistic S.L. Tots els drets reservats.</p>
+                </div>
+                
+                <div class="flex space-x-8 text-slate-600 font-medium text-sm">
+                    <a href="#" class="hover:text-blue-800 transition">Avís Legal</a>
+                    <a href="#" class="hover:text-blue-800 transition">Privacitat</a>
+                    <a href="#" class="hover:text-blue-800 transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lògica Menú Mòbil
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            // Tancar menú en fer click a un link (mòbil)
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileBtn.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                });
+            });
+
+            // Gestió d'enviament de formulari (Mockup)
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitBtn = contactForm.querySelector('button');
+                const originalText = submitBtn.innerText;
+                
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Enviant...';
+                submitBtn.classList.add('bg-emerald-500');
+
+                // Simulem resposta de xarxa
+                setTimeout(() => {
+                    submitBtn.innerText = 'Rebut! Ens posarem en contacte.';
+                    contactForm.reset();
+                    
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalText;
+                        submitBtn.classList.remove('bg-emerald-500');
+                    }, 3000);
+                }, 1500);
+            });
+
+            // Navbar dinàmica al fer scroll
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-lg', 'py-2');
+                    header.classList.remove('py-4');
+                } else {
+                    header.classList.remove('shadow-lg', 'py-2');
+                    header.classList.add('py-4');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
